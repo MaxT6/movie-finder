@@ -9,7 +9,7 @@ function form (state=intialFormState, action) {
   switch(action.type) {
     case types.INPUT_CHANGE: {
       const { movieTitle, value } = action.payload
-      return{...state, [movieTitle]:value }
+      return{...state}
     }
     case types.RESET_FORM: {
       return {
