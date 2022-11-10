@@ -4,18 +4,34 @@ import axios from "axios";
 const API_KEY=process.env.REACT_APP_API_KEY;
 const axios = require("axios");
 
-const options = {
-  method: 'GET',
-  url: 'https://moviesdb5.p.rapidapi.com/om',
-  params: {t: 'Game of Thrones'},
-  headers: {
-    'X-RapidAPI-Key': API_KEY,
-    'X-RapidAPI-Host': 'moviesdb5.p.rapidapi.com'
-  }
+export const inputChange = ({ movieTitle }) => {
+  return ({
+    type: types.INPUT_CHANGE,
+    payload: { movieTitle }
+  })
 };
 
-axios.request(options).then(function (response) {
-	console.log(response.data);
-}).catch(function (error) {
-	console.error(error);
-});
+export const resetForm = () => {
+  return({
+    type: types.RESET_FORM
+  })
+};
+
+export const fetchMovie = (movieTitle) => {
+   return function (dispatch) {
+    const options = {
+      method: 'GET',
+      url: 'https://moviesdb5.p.rapidapi.com/om',
+      params: {t: movieTitle },
+      headers: {
+        'X-RapidAPI-Key': API_KEY,
+        'X-RapidAPI-Host': 'moviesdb5.p.rapidapi.com'
+      }
+    };
+    axios.request(options).then(function (response) {
+      console.log(response.data);
+    }).catch(function (error) {
+      console.error(error);
+    });
+  }
+}
