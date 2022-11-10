@@ -2,7 +2,6 @@ import * as types from "./action-types";
 import axios from "axios";
 
 const API_KEY=process.env.REACT_APP_API_KEY;
-const axios = require("axios");
 
 export const inputChange = ({ movieTitle }) => {
   return ({
@@ -22,7 +21,8 @@ export const fetchMovie = (movieTitle) => {
     const options = {
       method: 'GET',
       url: 'https://moviesdb5.p.rapidapi.com/om',
-      params: {t: movieTitle },
+      // params: {t: movieTitle },
+      params: {t: "Jaws" },
       headers: {
         'X-RapidAPI-Key': API_KEY,
         'X-RapidAPI-Host': 'moviesdb5.p.rapidapi.com'
