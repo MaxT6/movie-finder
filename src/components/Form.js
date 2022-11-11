@@ -9,13 +9,14 @@ export const Form = (props) => {
     const onInputChange = evt => {
         props.form.movieTitle = evt.target.value
         props.inputChange(props.form.movieTitle)
+        console.log("props.form.movieTitle", props.form.movieTitle)
     }
 
    
 
     const onSubmit = evt => {
         evt.preventDefault();
-        props.fetchMovie(props.form.fetchMovie)
+        props.fetchMovie(props.form.movieTitle)
      
        
     }

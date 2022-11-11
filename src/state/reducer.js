@@ -11,7 +11,7 @@ function form (state = intialFormState, action) {
       const { movieTitle, value } = action.payload
       console.log("HERE IN REDUCER:", "movie title:",movieTitle, "value:", value)
     console.log("state in reducer:", state)
-      return {...state, [movieTitle]: value}
+      return {...state, [movieTitle]: value }
     }
     case types.RESET_FORM: {
       return {

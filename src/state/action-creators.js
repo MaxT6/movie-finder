@@ -3,7 +3,8 @@ import axios from "axios";
 
 const API_KEY=process.env.REACT_APP_API_KEY;
 
-export const inputChange = ({ movieTitle }) => {
+export const inputChange = ( movieTitle ) => {
+  console.log("inputChange", movieTitle)
   return ({
     type: types.INPUT_CHANGE,
     payload: { movieTitle }
