@@ -32,10 +32,10 @@ export const fetchMovie = (movieTitle) => {
     };
     axios.request(options).then(function (response) {
       console.log(response.data);
-    //   dispatch({
-    //     type: types.SHOW_MOVIE,
-    //     payload: `Heres the movie you searched: ${response.data}`
-    //   })
+      dispatch({
+        type: types.SHOW_MOVIE,
+        payload: `Heres the movie you searched: ${response.data}`
+      })
     }).catch(function (error) {
       console.error(error);
     });
