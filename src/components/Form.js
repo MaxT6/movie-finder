@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 
 export const Form = (props) => {
 
- console.log(props.form)
+ console.log("PROPS.FORM:", props.form.movieTitle)
 
     const onInputChange = evt => {
         props.form.movieTitle = evt.target.value

@@ -17,11 +17,13 @@ export const resetForm = () => {
 };
 
 export const fetchMovie = (movieTitle) => {
+    console.log(" NEW MOVIE TITLE:", movieTitle)
    return function (dispatch) {
     const options = {
       method: 'GET',
       url: 'https://moviesdb5.p.rapidapi.com/om',
-      params: {t: "Jaws" },
+      params: {t: movieTitle },
+    // params: {t: "Star Wars" },
       headers: {
         'X-RapidAPI-Key': API_KEY,
         'X-RapidAPI-Host': 'moviesdb5.p.rapidapi.com'
@@ -29,10 +31,10 @@ export const fetchMovie = (movieTitle) => {
     };
     axios.request(options).then(function (response) {
       console.log(response.data);
-      dispatch({
-        type: types.SHOW_MOVIE,
-        payload: `Heres the movie you searched: ${response.data}`
-      })
+    //   dispatch({
+    //     type: types.SHOW_MOVIE,
+    //     payload: `Heres the movie you searched: ${response.data}`
+    //   })
     }).catch(function (error) {
       console.error(error);
     });
