@@ -3,6 +3,7 @@ import * as actionCreators from "../state/action-creators";
 import { connect } from "react-redux";
 
 export const Form = (props) => {
+  console.log("The props", props)
 
  console.log("PROPS.FORM:", props.form.movieTitle)
 
@@ -33,8 +34,6 @@ export const Form = (props) => {
                 type="text"
                 value={props.form.movieTitle}
             />
-
-
             <button>Submit</button>
         </form>
     </div>
