@@ -12,3 +12,71 @@ code {
     monospace;
 }
 
+.header {
+  background-color: lightblue;
+}
+
+
+.button {
+  background-color: lightblue;
+  border-radius: 13%;
+  /* border: 3px; */
+  border-color: black;
+}
+
+.movie-container {
+  /* background-color: blue; */
+}
+
+.movie-card {
+  /* width: 50%; */
+  /* background-color: aquamarine; */
+}
+
+.movie-title {
+  /* background-color: chocolate; */
+}
+
+.poster-raiting-container {
+  display: flex;
+  justify-content: center;
+}
+
+.movie-poster-container {
+  /* background-color: blueviolet; */
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.movie-poster {
+  /* background-color: wheat; */
+  margin-left: 150px;
+  border-radius: 1%;
+}
+
+.movie-rating-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  /* background-color: darkgreen; */
+  width: 15%;
+}
+
+.movie-rating {
+  /* background-color: darkkhaki; */
+  font-size:x-large;
+  width: 75%;
+  border: 4px;
+}
+
+.movie-plot-container {
+  display: flex;
+  justify-content: center;
+}
+
+.movie-plot {
+  /* background-color: darkred; */
+  width: 50%;
+}
+

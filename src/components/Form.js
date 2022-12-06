@@ -1,6 +1,7 @@
 import React from 'react'; //typed rafce to create this Form Component using extension
 import * as actionCreators from "../state/action-creators";
 import { connect } from "react-redux";
+import { Button } from '@mui/material';
 
 export const Form = (props) => {
   console.log("The props", props)
@@ -24,7 +25,7 @@ export const Form = (props) => {
   return (
     <div>
       <form id="form" onSubmit={onSubmit}>
-            <h2>Search For A Movie</h2>
+            <h2 className='header'>Search For A Movie</h2>
             <input
                 maxLength={50}
                 onChange={onInputChange}
@@ -34,7 +35,10 @@ export const Form = (props) => {
                 type="text"
                 value={props.form.movieTitle}
             />
-            <button>Submit</button>
+            {/* <Button>
+              Submit
+            </Button> */}
+            <button className='button'>Submit</button>
         </form>
     </div>
   )
